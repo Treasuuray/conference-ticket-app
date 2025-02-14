@@ -5,17 +5,17 @@ import Link from "next/link";
 import { useState } from 'react';
 
 export default function Next1() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [specialRequest, setSpecialRequest] = useState("");
-  const [image, setImage] = useState(null);
-  const [imageUrl, setImageUrl] = useState("");
-  const [errors, setErrors] = useState({});
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [specialRequest, setSpecialRequest] = useState<string>("");
+  const [image, setImage] = useState<File | null>(null);
+  const [imageUrl, setImageUrl] = useState<string>("");
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
   usePathname();
   const router = useRouter(); // Ensure this is used within a valid Next.js component
 
   const validateForm = () => {
-    let newErrors = {};
+    let newErrors: { [key: string]: string } = {};
     if (!name.trim()) newErrors.name = "Name is required";
     if (!email.trim()) newErrors.email = "Email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) newErrors.email = "Invalid email format";
@@ -26,7 +26,7 @@ export default function Next1() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validateForm()) return;
     
