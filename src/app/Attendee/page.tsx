@@ -17,7 +17,7 @@ export default function Next1() {
   const router = useRouter(); // Ensure this is used within a valid Next.js component
 
   const validateForm = () => {
-    let newErrors: { [key: string]: string } = {};
+    const newErrors: { [key: string]: string } = {};
     if (!name.trim()) newErrors.name = "Name is required";
     if (!email.trim()) newErrors.email = "Email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) newErrors.email = "Invalid email format";
@@ -53,6 +53,8 @@ export default function Next1() {
       
       const data = await res.json();
       setImageUrl(data.secure_url);
+      console.log(imageUrl);
+      
     } catch (error) {
       console.error("Error uploading image:", error);
     }

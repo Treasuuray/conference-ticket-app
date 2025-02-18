@@ -30,7 +30,7 @@ export default function Home() {
         <div className="w-full"><Image src="/Progress-container.svg" className="h-auto max-w-full" width={670} height={50} alt="progress"/></div>
         <div className="content w-full h-auto text-white rounded-[32px] p-6 shadow-lg mx-auto border border-cyan-500 mt-10 mb-16">
           <div className="w-full h-auto text-white rounded-[24px] p-6 shadow-lg mx-auto border border-cyan-500 text-center">
-            <h1 className="font-Road Rage text-[42px]">Techember Fest "25</h1>
+          <h1 className='font-["Road_Rage"] text-[42px]'>Techember Fest &quot;25</h1>
             <p className="pb-2">Join us for an unforgettable experience at</p>
             <p className="pb-2">[Event Name] Secure your spot now.</p>
             <div className="flex justify-evenly">

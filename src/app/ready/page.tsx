@@ -39,7 +39,7 @@ import {
                     <div className="mb-12 relative grid place-item-center">
                         <Image className="w-[350px]" src="/Subtract.png" width={250} height={680} alt="Ticket" />
                         <div className="border border-cyan-500 w-full max-w-[300px] h-auto rounded-[16px] p-6 absolute mx-6 mt-4 place-items-center text-center">
-                            <p className="font-Road Rage text-[24px]">Techember Fest "25</p>
+                            <p className="font-Road Rage text-[24px]">Techember Fest &quot;25</p>
                             <p className="font-Roboto text-[12px]">📍 04 Rumens road, Ikoyi, Lagos</p>
                             <p className="font-Roboto text-[12px]">📅 March 15, 2025 | 7:00 PM</p>
                             <div className="w-[190px] h-[190px] border-4 border-cyan-500 rounded-[12px] text-center mt-6 mb-6"></div>
@@ -66,7 +66,7 @@ import {
                                 </div>
                                 <div className="pt-2">
                                     <label className="text-gray-300 text-[10px] font-Roboto">Special request?</label>
-                                    <p className="text-gray-300 text-[10px] font-Roboto">Nil ? Or the user's sad story they write in there gets this whole space, Max of three rows</p>
+                                    <p className="text-gray-300 text-[10px] font-Roboto">Nil ? Or the user&apos;s sad story they write in there gets this whole space, Max of three rows</p>
                                 </div>
                             </div>
                         </div>
