@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="main-container">
       <div className="flex justify-evenly mt-8 border border-cyan-500 m-auto px-4 sm:px-12 pt-5 pb-12 w-full max-w-[1200px] h-[76px] rounded-[24px]">
-        <span><img src="Frame 1618871078 (1).svg" className="h-auto max-w-full"></img></span>
-        <span><img src="Frame 1618871077.svg" className="h-auto max-w-full"></img></span>
+        <span><Image src="/Frame-1618871078-(1).svg" width={100} height={100} alt="Logo 1" /></span>
+        <span><Image src="/Frame-1618871077.svg" className="h-auto max-w-full" width={250} height={250} alt="Logo 2" /></span>
         <div className="flex">
           <span>
             <button type="button" className="flex text-gray-900 bg-white border border-cyan-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-4 py-1 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
@@ -26,7 +27,7 @@ export default function Home() {
           <p className="font-JejuMyeongjo text-[32px] text-left">Ticket Selection</p>
           <p className="font-Roboto text-[16px] text-right">Step 1/3</p>
         </div>
-        <div className="w-full"><img src="Progress container.svg" className="h-auto max-w-full"></img></div>
+        <div className="w-full"><Image src="/Progress-container.svg" className="h-auto max-w-full" width={670} height={50} alt="progress"/></div>
         <div className="content w-full h-auto text-white rounded-[32px] p-6 shadow-lg mx-auto border border-cyan-500 mt-10 mb-16">
           <div className="w-full h-auto text-white rounded-[24px] p-6 shadow-lg mx-auto border border-cyan-500 text-center">
             <h1 className="font-Road Rage text-[42px]">Techember Fest "25</h1>
@@ -42,9 +43,9 @@ export default function Home() {
           <p className="mt-6">Select Ticket Type:</p>
           <div className="content w-full h-auto text-white rounded-[24px] shadow-lg mx-auto border border-cyan-500 mt-4 mb-19 p-4">
             <div className="box md:flex justify-center items-center sm:grid">
-              <img className="g-4 p-4" src="Radio 4.svg"></img>
-              <img className="g-4 p-4" src="Radio 5.svg"></img>
-              <img className="g-4 p-4" src="Radio 5.svg"></img>
+              <Image className="g-4 p-4" src="/Radio-4.svg" width={170} height={150} alt="Radio1" />
+              <Image className="g-4 p-4" src="/Radio-5.svg" width={170} height={150} alt="Radio2" />
+              <Image className="g-4 p-4" src="/Radio-5.svg" width={170} height={150} alt="Radio3" />
             </div>
           </div>
           <p className="mt-10">Number of Tickets</p>

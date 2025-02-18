@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import Image from "next/image";
 import { 
     } from 'next/navigation';
 
@@ -9,8 +10,8 @@ import {
         return (
             <div className="main-container">
                 <div className="flex justify-evenly mt-8 border border-cyan-500 m-auto px-4 sm:px-12 pt-5 pb-12 w-full max-w-[1200px] h-[76px] rounded-[24px]">
-                    <span><img src="Frame 1618871078 (1).svg" alt="Logo 1" /></span>
-                    <span><img src="Frame 1618871077.svg" alt="Logo 2" /></span>
+                    <span><Image src="/Frame-1618871078-(1).svg" className="h-auto max-w-full" width={100} height={100} alt="Logo 1" /></span>
+                    <span><Image src="/Frame-1618871077.svg" className="h-auto max-w-full" width={250} height={250} alt="Logo 2" /></span>
                     <div className="flex">
                         <span>
                             <button type="button" className="flex text-gray-900 bg-white border border-cyan-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 
@@ -32,11 +33,11 @@ import {
                         <p className="font-JejuMyeongjo text-[32px] text-left">Ready</p>
                         <p className="font-Roboto text-[16px] text-right">Step 3/3</p>
                     </div>
-                    <div className=""><img src="Progress container.svg" alt="Progress" /></div>
+                    <div className=""><Image src="/Progress-container.svg" width={670} height={50} alt="Progress" /></div>
                     <p className="font-Alatsi text-[32px] mt-[40px] mb-[10px]">Your Ticket is Booked!</p>
                     <p className="font-Roboto text-[16px] mb-[12px]">Check your email for a copy or you can download</p>
                     <div className="mb-12 relative grid place-item-center">
-                        <img className="w-[350px]" src="Subtract.png" alt="Ticket" />
+                        <Image className="w-[350px]" src="/Subtract.png" width={250} height={680} alt="Ticket" />
                         <div className="border border-cyan-500 w-full max-w-[300px] h-auto rounded-[16px] p-6 absolute mx-6 mt-4 place-items-center text-center">
                             <p className="font-Road Rage text-[24px]">Techember Fest "25</p>
                             <p className="font-Roboto text-[12px]">📍 04 Rumens road, Ikoyi, Lagos</p>
@@ -70,7 +71,7 @@ import {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-[-150px]  place-items-center"><img className="w-[286px] h-[86px] relative" src="Bar code.png" alt="Barcode" /></div>
+                    <div className="mt-[-150px]  place-items-center"><img className="w-[286px] h-[86px] relative" src="/Bar-Code.png" alt="Barcode" /></div>
                     <div className="flex flex-col md:flex-row items-center justify-center w-full gap-4 mb-10 mt-16">
                     <Link href="/">
                         <button className="border border-cyan-500 w-full max-w-[296px] h-[48px] px-16 pt-4 pb-10 rounded-[8px] text-[#24A0B5]">Book Another Ticket</button>

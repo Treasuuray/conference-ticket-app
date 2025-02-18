@@ -3,6 +3,8 @@
 import {  usePathname, useRouter, } from 'next/navigation';
 import Link from "next/link";
 import { useState } from 'react';
+import Image from "next/image";
+
 
 export default function Next1() {
   const [name, setName] = useState<string>("");
@@ -34,8 +36,8 @@ export default function Next1() {
     router.push("/ready");
   };
 
-  const handleImageUpload = async (e) => {
-    const file = e.target.files[0];
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
     if (!file) return;
     
     setImage(file);
@@ -48,6 +50,7 @@ export default function Next1() {
         method: "POST",
         body: formData,
       });
+      
       const data = await res.json();
       setImageUrl(data.secure_url);
     } catch (error) {
@@ -58,11 +61,12 @@ export default function Next1() {
   return (
     <div className="main-container">
       <div className="flex justify-evenly mt-8 border border-cyan-500 m-auto px-12 pt-5 pb-12 w-full max-w-[1220px] h-[76px] rounded-[24px]">
-        <span><img src="Frame 1618871078 (1).svg" alt="Logo 1" /></span>
-        <span><img src="Frame 1618871077.svg" alt="Logo 2" /></span>
+        <span><Image src="/Frame-1618871078-(1).svg" className="h-auto max-w-full"width={100} height={100} alt="Logo 1" /></span>
+        <span><Image src="/Frame-1618871077.svg" className="h-auto max-w-full" width={250} height={250} alt="Logo 2" /></span>
         <div className="flex">
           <span>
-            <button type="button" className="flex text-gray-900 bg-white border border-cyan-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-4 py-0.1 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+            <button type="button" className="flex text-gray-900 bg-white border border-cyan-300 focus:outline-none hover:bg-gray-100 
+            focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-4 py-0.1 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
               <p className="mt-2">MY TICKETS</p>
               <svg viewBox="0 0 24 24" width={40} fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
                 <path d="M7 12L17 12M7 12L11 8M7 12L11 16" stroke="#000000"></path>
@@ -76,7 +80,7 @@ export default function Next1() {
           <p className="font-JejuMyeongjo text-[32px] text-left">Attendee Details</p>
           <p className="font-Roboto text-[16px] text-right">Step 2/3</p>
         </div>
-        <div className="w-full"><img src="Progress container.png" alt="Progress" /></div>
+        <div className="w-full"><Image src="/Progress-container.png"width={670} height={50} alt="Progress" /></div>
         <div className="content w-full h-auto text-white rounded-[32px] p-6 shadow-lg mx-auto border border-cyan-500 mt-10 mb-16 p-10">
           <p className="font-Roboto text-[16px]">Upload profile Photo</p>
           <div className="bg-[#000000] w-full h-[220px] opacity-80 mt-10 place-items-center text-center">
